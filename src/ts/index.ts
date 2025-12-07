@@ -1,5 +1,7 @@
 // Imports your SCSS stylesheet
-import "@/scss/main.scss";
+// import "@/scss/main.scss";
+import "./styles/index.scss";
+
 
 interface Card {
   face: string;
