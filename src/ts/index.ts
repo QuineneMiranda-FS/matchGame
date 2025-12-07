@@ -1,7 +1,6 @@
 // Imports your SCSS stylesheet
-// import "@/scss/main.scss";
-import "./styles/index.scss";
-
+import "@/scss/main.scss";
+// import "./styles/index.scss";
 
 interface Card {
   face: string;
@@ -35,6 +34,5 @@ function createDeck(): Card[] {
     }
   }
   return deck;
+  console.log(deck);
 }
-
-console.log(deck);
