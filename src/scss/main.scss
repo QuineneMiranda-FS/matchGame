@@ -1,0 +1,102 @@
+/* ----------Variables------------------ */
+$primary-color: #f5f5f5;
+$secondary-color: #e49794;
+$bckgrnd-color: #0f4602;
+
+/* -----------main styles-------------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $primary-color;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: $bckgrnd-color;
+}
+header {
+  display: flex;
+}
+
+#column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+}
+button {
+  background-color: #04aa6d;
+  border: 1px solid #008000;
+  border-radius: 5px;
+  color: $primary-color;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+/* -------------type------------------- */
+h1 {
+  text-transform: uppercase;
+}
+h2 {
+}
+
+/* ------------GAME------------------- */
+#gameBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 140px);
+  gap: 10px;
+  justify-content: space-evenly;
+  align-content: space-between;
+}
+
+#attempts {
+  font-weight: bold;
+  color: $secondary-color;
+  text-decoration: underline;
+}
+
+#game-status {
+  color: $secondary-color;
+}
+/* -------------Cards--------------------- */
+.card {
+  width: 100px;
+  height: 140px;
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: pre;
+  font-size: 16px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.card-back {
+  background-color: $primary-color;
+  background-image: url("card-back.png");
+  background-size: cover;
+  color: transparent;
+}
+
+.card-revealed {
+  background-color: $primary-color;
+  color: black;
+  cursor: default;
+}
+/* temp until mk real cards */
+.card-red {
+  border: $secondary-color 1px solid;
+}
