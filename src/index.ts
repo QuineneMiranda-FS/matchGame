@@ -61,7 +61,7 @@ window.onload = function (): void {
     attempts.toString();
   document
     .getElementById("restart-button")
-    ?.addEventListener("click", restartGame); // optional chaining
+    ?.addEventListener("click", restartGame); // optional
 };
 
 function prepareCardSet(deck: CardData[]): void {
@@ -151,12 +151,12 @@ function startGame(): void {
 }
 
 function selectCard(this: GameCardElement): void {
-  // Prevent further clicks when cards flipping back or game is over
+  // **added to prevent further clicks when cards flipping back or game is over
   if ((card1stSelected && card2ndSelected) || attempts >= maxAttempts) {
     return;
   }
 
-  // Only unrevealed cards clickable
+  // makes only unrevealed cards clickable
   if (this.classList.contains("card-back")) {
     if (!card1stSelected) {
       card1stSelected = this;
@@ -166,7 +166,7 @@ function selectCard(this: GameCardElement): void {
       revealCard(card2ndSelected);
 
       // delay for update
-      setTimeout(update, 1000);
+      setTimeout(update, 1000); //update if want to change delay timeframe
     }
   }
 }
