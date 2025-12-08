@@ -4,7 +4,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve"
+    "start": "webpack serve --port 9001"
   },
   "keywords": [],
   "author": "",

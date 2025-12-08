@@ -1,5 +1,5 @@
 // Import SCSS stylesheet
-import "@/styles/index.scss";
+import "./styles/index.scss";
 
 type CardData = {
   face: string;
