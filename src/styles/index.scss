@@ -1,6 +1,6 @@
 // ----------Screen Sizes ----------------
 
-// breakpoints for screen sizes
+// breakpoints for screen sizes //to be added
 $breakpoints: (
   "small": 480px,
   "medium": 768px,
@@ -23,7 +23,6 @@ body {
   justify-content: center;
   width: 90%;
   padding: 20px;
-  border-radius: 25px;
   background-color: $background-color;
 }
 header {
@@ -54,7 +53,6 @@ button:hover {
 h1 {
   text-transform: uppercase;
 }
-
 
 /* ------------GAME------------------- */
 #gameBoard {
@@ -93,7 +91,7 @@ h1 {
 
 .card-back {
   background-color: $primary-color;
-  background-image: url("card-back.png");
+  background-image: url("../img/card-back.png");
   background-size: cover;
   color: transparent;
 }
