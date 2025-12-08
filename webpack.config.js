@@ -1,29 +1,21 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-    module.exports = {
-      entry: './src/index.ts', // Your entry point
-      module: {
-        rules: [
-          {
-            test: /\.tsx?$/, // Apply ts-loader to .ts and .tsx files
-            use: 'ts-loader',
-            exclude: /node_modules/, // Exclude node_modules
-          },
-        ],
-      },
-      resolve: {
-        extensions: ['.tsx', '.ts', '.js'], // Resolve these extensions
-      },
-      output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
-    extensions: [".js", ".scss", ".css"],
+
+module.exports = {
+  entry: "./src/index.ts", // Your entry point
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
       {
-        test: /\.js|\.jsx$/ // Test for .js files
+        test: /\.tsx?$/, // Apply ts-loader to .ts and .tsx files
+        use: "ts-loader",
+        exclude: /node_modules/, // Exclude node_modules
+      },
+      {
+        test: /\.js|\.jsx$/, // Test for .js and .jsx files
         exclude: /node_modules/, // Exclude node_modules
         use: {
           loader: "babel-loader", // Use Babel to transpile ES6 to ES5
@@ -37,6 +29,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
         use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".scss", ".css"], // Resolve these extensions and combine them
   },
   plugins: [
     new HtmlWebpackPlugin({

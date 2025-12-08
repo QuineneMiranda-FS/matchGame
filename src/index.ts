@@ -1,19 +1,15 @@
 // Import SCSS stylesheet
 import "@/styles/index.scss";
 
-interface CardData {
+type CardData = {
   face: string;
   suit: string;
   value: string;
-}
+};
 
-interface GameCardElement extends HTMLDivElement {
-  dataset: {
-    face: string;
-    suit: string;
-    value: string;
-  };
-}
+type GameCardElement = HTMLDivElement & {
+  readonly dataset: CardData;
+};
 
 let attempts: number = 0;
 
